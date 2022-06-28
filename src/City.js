@@ -8,12 +8,17 @@ function City(props) {
     "Hawaii",
     "Delhi",
     "Georgia",
+    "Bengalore",
+    "Bahamas",
   ];
   return (
     <ul>
-      {cities.sort().map((c) => (
-        <li>{c}</li>
-      ))}
+      {cities
+        .sort()
+        .filter((c) => c.startsWith("B"))
+        .map((c) => (
+          <li>{c}</li>
+        ))}
     </ul>
   );
 }
