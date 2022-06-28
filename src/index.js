@@ -2,13 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import Factorial from "./Factorial.js";
+// import Factorial from "./Factorial.js";
+import Prime from "./Prime.js";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Factorial num={6} />
+    <Prime num={6} />
   </React.StrictMode>
 );
 
