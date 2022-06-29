@@ -13,13 +13,13 @@ const is_prime = (num) => {
 };
 
 function Prime(props) {
-  const numbers = [...Array(101).keys()];
+  const numbers = [...Array(101).keys()].slice(1);
+  const primes = numbers.filter((num) => is_prime(num));
+
   return (
     <ul>
-      {numbers.map((num) => (
-        <li key={num}>
-          {num} is prime? {is_prime(num) ? "Yes" : "No"}
-        </li>
+      {primes.map((num) => (
+        <li key={num}>{num}</li>
       ))}
     </ul>
   );
